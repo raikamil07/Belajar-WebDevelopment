@@ -1,136 +1,196 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Project1</title>
-    <style>
-        * {
-            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-        }
-        body {
-            max-width: 40%;
-            margin: 0 auto;
-            padding: 20px;
-            box-sizing: border-box;
-        }
-        h3 {
-            position: relative;
-            margin-top: 5px;
-            top: 20px;   
-        }
-        .subheading {
-            position: relative;
-            bottom: 15px;
-        }
-        .item-list1 {
-            position: relative;
-            bottom: 28px;
-        }
-        .item-list2 {
-            position: relative;
-            bottom: 15px;
-        }
-    </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CV - Raihan Kamil</title>
+  <style>
+    /* === Global Reset & Typography === */
+    * {
+      box-sizing: border-box;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+
+    body {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 30px;
+      line-height: 1.6;
+    }
+
+    h1, h2, h3 {
+      margin-bottom: 5px;
+    }
+
+    hr {
+      border: 0;
+      border-top: 1px solid #ccc;
+      margin: 10px 0;
+    }
+
+    section {
+      margin-bottom: 40px;
+    }
+
+    .subheading {
+      font-style: italic;
+      margin-bottom: 10px;
+    }
+
+    .info-row {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    ul {
+      padding-left: 20px;
+      margin-top: 5px;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+      margin-right: 8px;
+    }
+
+    .cert-item {
+      justify-content: space-between;
+    }
+
+    footer {
+      text-align: center;
+      font-size: 0.9em;
+      color: #777;
+    }
+  </style>
 </head>
 <body>
+
+  <!-- === HEADER === -->
+  <header>
     <h1>Raihan Kamil</h1>
-    <section id="biodata">
-        <p>
-            <a href="https://wa.me/6285748236039">+62 85748236039 &#124;</a>
-            <a href="mailto:raihankamil0705@gmail.com">raihankamil0705@gmail.com &#124;</a>
-            <a href="https://www.linkedin.com/in/raihankamil">linkedin/in/raihankamil &#124;</a>
-            <a href="https://profile.ryuga.web.id">profile.ryuga.web.id &#124;</a>
-            Gg.Pagarsih Barat IV no 2/85, Bandung, Indonesia
-        </p>
-    </section>
+    <address>
+      <p>
+        <a href="https://wa.me/6285748236039">+62 8574 8236 039</a> |
+        <a href="mailto:raihankamil0705@gmail.com">raihankamil0705@gmail.com</a> |
+        <a href="https://www.linkedin.com/in/raihankamil">LinkedIn</a> |
+        <a href="https://profile.ryuga.web.id">profile.ryuga.web.id</a> |
+        Bandung, Indonesia
+      </p>
+    </address>
+  </header>
+
+  <main>
+
+    <!-- === PENDIDIKAN === -->
     <section id="education">
-        <h3>PENDIDIKAN</h3> 
-        <hr>
-        <p style="display: flex; justify-content: space-between;">
-            <span>SMK Negeri 4 Bandung</span>
-            <span>Jul 2022 - May 2025</span>
-        </p>
-        <p class="subheading"><i>Teknik Komputer dan Jaringan</i></p>
+      <h2>Pendidikan</h2>
+      <hr />
+      <div class="info-row">
+        <span>SMK Negeri 4 Bandung</span>
+        <span>Jul 2022 - May 2025</span>
+      </div>
+      <p class="subheading">Teknik Komputer dan Jaringan</p>
     </section>
+
+    <!-- === PENGALAMAN KERJA === -->
     <section id="experience">
-        <h3>PENGALAMAN KERJA</h3>
-        <hr>
-        <p style="display: flex; justify-content: space-between;">
-            <span>PT Init Lima Teknologi</span>
-            <span>Jul 2024 - Oct 2024</span>
-        </p>
-        <p class="subheading"><i>Engineer Internship</i></p>
-        <ul class="item-list1">
-            <li>Implementasi cluster Proxmox VE pada 7 server (4 node storage, 3 manajemen) untuk optimasi deployment dan migrasi VM.</li>
-            <li>Berkolaborasi dengan tim engineer dalam deployment, manajemen, dan optimisasi server.</li>
-            <li>Mendesain topologi jaringan di GNS3 dan VMware dengan konfigurasi OVS/OVN untuk simulasi jaringan perusahaan.</li>
-            <li>Melakukan rack-mounting kepada 7 perangkat  server dan 1 UPS sesuai standar keamanan dan kabel management terstruktur.</li>
-            <li>Mendiagnosis & menangani insiden software pada lingkungan server, termasuk deployment aplikasi kritis.</li>
-        </ul>
+      <h2>Pengalaman Kerja</h2>
+      <hr />
+      <div class="info-row">
+        <span>PT Init Lima Teknologi</span>
+        <span>Jul 2024 - Oct 2024</span>
+      </div>
+      <p class="subheading">Engineer Internship</p>
+      <ul>
+        <li>Implementasi cluster Proxmox VE pada 7 server (4 storage, 3 manajemen) untuk optimasi VM deployment dan migrasi.</li>
+        <li>Kolaborasi dengan tim engineer untuk manajemen dan optimisasi server.</li>
+        <li>Mendesain topologi jaringan di GNS3 dan VMware dengan OVS/OVN.</li>
+        <li>Melakukan rack-mounting 7 perangkat server dan 1 UPS sesuai standar keamanan dan kabel terstruktur.</li>
+        <li>Mendiagnosis dan menangani insiden software, termasuk deployment aplikasi kritis.</li>
+      </ul>
     </section>
+
+    <!-- === ORGANISASI === -->
     <section id="organization">
-        <h3>PENGALAMAN ORGANISASI</h3>
-        <hr>
-        <p style="display: flex; justify-content: space-between;">
-            <span>OSIS(Organisasi Siswa Intra Sekolah)</span>
-            <span>Ags 2022 - Sep 2024</span>
-        </p>
-        <p class="subheading"><i>Ketua Seksi Bintang 4</i></p>
-        <ul class="item-list1">
-            <li>Berperan aktif dalam merancang dan melaksanakan program untuk meningkatkan potensi akademik siswa.</li>
-            <li>Menginisiasi dan menjalankan program literasi sekolah, termasuk program unggulan Pustaka Opat sebagai media 
-                peningkatan minat baca siswa.
-            </li>
-        </ul>
-         <p style="display: flex; justify-content: space-between;">
-            <span>ORBIT (Organization of Basic Information Technology)</span>
-            <span>Ags 2022 - Jun 2024</span>
-        </p>
-        <p class="subheading"><i>Ketua Divisi IT Support </i></p>
-        <ul class="item-list1">
-            <li>Berkontribusi dalam pengembangan pemahaman teknis siswa di bidang komputer, jaringan, dan server.</li>
-            <li>Menyampaikan materi dasar terkait jaringan komputer dan konsep topologi jaringan kepada anggota baru 
-                menggunakan cisco packet tracer
-            </li>
-        </ul>
-    </section>
-    <section id="skils">
-        <h3>SKILLS</h3>
-        <hr>
-        <p>Hard Skills</p>
-        <ul class="item-list2">
-            <li><b>Sistem Operasi:</b> Linux, Windows &minus; instalasi, konfigurasi, dan troubleshooting</li>
-            <li><b>Virtualisasi:</b>Proxmox VE, VMware Workstation – pengelolaan VM & container.</li> 
-            <li><b>Backup & Otomasi:</b>Backup manual dengan rsync, tar, otomatisasi dengan cron, serta Bash scripting</li>
-            <li><b>Networking:</b>Subnetting, static routing, VLAN, OVS/OVN, GNS3.</li>
-            <li><b>Cloud:</b>Dasar OpenStack (block storage, floating IP).</li>
-        </ul>
-        <p>Soft Skills</p>
-        <ul class="item-list2">
-            <li>Memiliki etos kerja tinggi, disiplin, dan tanggung jawab dalam menjalankan tugas.</li>
-            <li>Terbiasa bekerja tepat waktu dan teliti sehingga sesuai dengan hasil yang diinginkan</li>
-            <li>Mampu bekerja sama dalam tim.</li>
-            <li>Cepat beradaptasi di lingkungan baru dan mampu memecahkan masalah secara logis dan sistematis.</li>
-        </ul>
-        <p>Bahasa</p>
-        <ul class="item-list2">
-            <li><b>Bahasa Indonesia:</b>Asli</li>
-            <li><b>Bahasa Inggris</b>Menengah(Apabila Dibutuhkan)</li>
-        </ul>
-    </section>
-    <section id="certificate">
-        <h3>SERTIFIKASI</h3>
-        <hr>
+      <h2>Pengalaman Organisasi</h2>
+      <hr />
+
+      <article>
+        <div class="info-row">
+          <span>OSIS (Organisasi Siswa Intra Sekolah)</span>
+          <span>Ags 2022 - Sep 2024</span>
+        </div>
+        <p class="subheading">Ketua Seksi Bintang 4</p>
         <ul>
-            <li class="cert-item"><span>CERTIFICATE OF INTERNSHIP - PT Init Lima Teknologi</span> <span>Okt 2024</span> </li>
-            <li class="cert-item"><span>Technical Support Fundamentals - Google</span> <span>Apr 2024</span> </li>
-            <li class="cert-item"><span>The Bits and Bytes of Computer Networking - Google</span> <span>Mei 2024</span> </li>
-            <li class="cert-item"><span>Operating Systems and You: Becoming a Power User - Google</span> <span>Juli 2024</span> </li>
-            <li class="cert-item"><span>System Administration and IT Infrastructure Services - Google</span> <span>Sep 2024</span> </li>
-            <li class="cert-item"><span>Security: Defense against the digital dark arts - Google</span> <span>Okt 2024</span> </li>
-            <li class="cert-item"><span>Support Specialization - Google</span> <span>Okt 2024</span></li>
+          <li>Merancang dan menjalankan program peningkatan potensi akademik siswa.</li>
+          <li>Menginisiasi program literasi "Pustaka Opat" sebagai media peningkatan minat baca.</li>
         </ul>
+      </article>
+
+      <article>
+        <div class="info-row">
+          <span>ORBIT (Organization of Basic Information Technology)</span>
+          <span>Ags 2022 - Jun 2024</span>
+        </div>
+        <p class="subheading">Ketua Divisi IT Support</p>
+        <ul>
+          <li>Mengembangkan pemahaman teknis siswa dalam komputer, jaringan, dan server.</li>
+          <li>Mengajar topologi jaringan dan penggunaan Cisco Packet Tracer kepada anggota baru.</li>
+        </ul>
+      </article>
     </section>
+
+    <!-- === SKILLS === -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <hr />
+
+      <h3>Hard Skills</h3>
+      <ul>
+        <li><b>Sistem Operasi:</b> Linux, Windows – instalasi, konfigurasi, troubleshooting.</li>
+        <li><b>Virtualisasi:</b> Proxmox VE, VMware – pengelolaan VM & container.</li>
+        <li><b>Backup & Otomasi:</b> rsync, tar, cron, serta scripting Bash.</li>
+        <li><b>Networking:</b> Subnetting, static routing, VLAN, OVS/OVN, GNS3.</li>
+        <li><b>Cloud:</b> Dasar OpenStack – block storage, floating IP.</li>
+      </ul>
+
+      <h3>Soft Skills</h3>
+      <ul>
+        <li>Disiplin, tanggung jawab, dan etos kerja tinggi.</li>
+        <li>Tepat waktu dan teliti dalam menyelesaikan tugas.</li>
+        <li>Mampu bekerja sama dalam tim dan cepat beradaptasi.</li>
+        <li>Kemampuan pemecahan masalah logis dan sistematis.</li>
+      </ul>
+
+      <h3>Bahasa</h3>
+      <ul>
+        <li><b>Bahasa Indonesia:</b> Asli</li>
+        <li><b>Bahasa Inggris:</b> Menengah (apabila dibutuhkan)</li>
+      </ul>
+    </section>
+
+    <!-- === SERTIFIKASI === -->
+    <section id="certificate">
+      <h2>Sertifikasi</h2>
+      <hr />
+      <ul>
+        <li class="cert-item"><span>CERTIFICATE OF INTERNSHIP - PT Init Lima Teknologi</span> <span>Okt 2024</span></li>
+        <li class="cert-item"><span>Technical Support Fundamentals - Google</span> <span>Apr 2024</span></li>
+        <li class="cert-item"><span>The Bits and Bytes of Computer Networking - Google</span> <span>Mei 2024</span></li>
+        <li class="cert-item"><span>Operating Systems and You: Becoming a Power User - Google</span> <span>Jul 2024</span></li>
+        <li class="cert-item"><span>System Administration and IT Infrastructure Services - Google</span> <span>Sep 2024</span></li>
+        <li class="cert-item"><span>Security: Defense Against the Digital Dark Arts - Google</span> <span>Okt 2024</span></li>
+        <li class="cert-item"><span>Support Specialization - Google</span> <span>Okt 2024</span></li>
+      </ul>
+    </section>
+
+  </main>
+
+  <!-- === FOOTER === -->
+  <footer>
+    <p>&copy; 2025 Raihan Kamil</p>
+  </footer>
+
 </body>
 </html>
