@@ -4,6 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Project1</title>
+    <style>
+        * {
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        body {
+            max-width: 40%;
+            margin: 0 auto;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        h3 {
+            position: relative;
+            margin-top: 5px;
+            top: 20px;   
+        }
+        .subheading {
+            position: relative;
+            bottom: 15px;
+        }
+        .item-list1 {
+            position: relative;
+            bottom: 28px;
+        }
+        .item-list2 {
+            position: relative;
+            bottom: 15px;
+        }
+    </style>
 </head>
 <body>
     <h1>Raihan Kamil</h1>
@@ -23,7 +51,7 @@
             <span>SMK Negeri 4 Bandung</span>
             <span>Jul 2022 - May 2025</span>
         </p>
-        <p><i>Teknik Komputer dan Jaringan</i></p>
+        <p class="subheading"><i>Teknik Komputer dan Jaringan</i></p>
     </section>
     <section id="experience">
         <h3>PENGALAMAN KERJA</h3>
@@ -32,8 +60,8 @@
             <span>PT Init Lima Teknologi</span>
             <span>Jul 2024 - Oct 2024</span>
         </p>
-        <p><i>Engineer Internship</i></p>
-        <ul>
+        <p class="subheading"><i>Engineer Internship</i></p>
+        <ul class="item-list1">
             <li>Implementasi cluster Proxmox VE pada 7 server (4 node storage, 3 manajemen) untuk optimasi deployment dan migrasi VM.</li>
             <li>Berkolaborasi dengan tim engineer dalam deployment, manajemen, dan optimisasi server.</li>
             <li>Mendesain topologi jaringan di GNS3 dan VMware dengan konfigurasi OVS/OVN untuk simulasi jaringan perusahaan.</li>
@@ -48,8 +76,8 @@
             <span>OSIS(Organisasi Siswa Intra Sekolah)</span>
             <span>Ags 2022 - Sep 2024</span>
         </p>
-        <p><i>Ketua Seksi Bintang 4</i></p>
-        <ul>
+        <p class="subheading"><i>Ketua Seksi Bintang 4</i></p>
+        <ul class="item-list1">
             <li>Berperan aktif dalam merancang dan melaksanakan program untuk meningkatkan potensi akademik siswa.</li>
             <li>Menginisiasi dan menjalankan program literasi sekolah, termasuk program unggulan Pustaka Opat sebagai media 
                 peningkatan minat baca siswa.
@@ -59,8 +87,8 @@
             <span>ORBIT (Organization of Basic Information Technology)</span>
             <span>Ags 2022 - Jun 2024</span>
         </p>
-        <p><i>Ketua Divisi IT Support </i></p>
-        <ul>
+        <p class="subheading"><i>Ketua Divisi IT Support </i></p>
+        <ul class="item-list1">
             <li>Berkontribusi dalam pengembangan pemahaman teknis siswa di bidang komputer, jaringan, dan server.</li>
             <li>Menyampaikan materi dasar terkait jaringan komputer dan konsep topologi jaringan kepada anggota baru 
                 menggunakan cisco packet tracer
@@ -71,7 +99,7 @@
         <h3>SKILLS</h3>
         <hr>
         <p>Hard Skills</p>
-        <ul>
+        <ul class="item-list2">
             <li><b>Sistem Operasi:</b> Linux, Windows &minus; instalasi, konfigurasi, dan troubleshooting</li>
             <li><b>Virtualisasi:</b>Proxmox VE, VMware Workstation – pengelolaan VM & container.</li> 
             <li><b>Backup & Otomasi:</b>Backup manual dengan rsync, tar, otomatisasi dengan cron, serta Bash scripting</li>
@@ -79,14 +107,14 @@
             <li><b>Cloud:</b>Dasar OpenStack (block storage, floating IP).</li>
         </ul>
         <p>Soft Skills</p>
-        <ul>
+        <ul class="item-list2">
             <li>Memiliki etos kerja tinggi, disiplin, dan tanggung jawab dalam menjalankan tugas.</li>
             <li>Terbiasa bekerja tepat waktu dan teliti sehingga sesuai dengan hasil yang diinginkan</li>
             <li>Mampu bekerja sama dalam tim.</li>
             <li>Cepat beradaptasi di lingkungan baru dan mampu memecahkan masalah secara logis dan sistematis.</li>
         </ul>
         <p>Bahasa</p>
-        <ul>
+        <ul class="item-list2">
             <li><b>Bahasa Indonesia:</b>Asli</li>
             <li><b>Bahasa Inggris</b>Menengah(Apabila Dibutuhkan)</li>
         </ul>
