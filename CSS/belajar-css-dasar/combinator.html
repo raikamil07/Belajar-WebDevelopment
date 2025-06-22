@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div ~ p {
+            color: red;
+        }
+        /* div + p {
+            color: red;
+        } adhacent sibling selector */
+        /* div > p {
+            color: red;
+        } child selector */
+        /* div  {
+            color: red;
+        } descendant  */
+    </style>
+</head>
+<body>
+    <div>
+        <article>
+            <p>ini dipilih</p>
+        </article>
+        <p>ini dipilih</p>
+    </div>
+    <p>ini tidak dipilih</p>
+</body>
+</html>
