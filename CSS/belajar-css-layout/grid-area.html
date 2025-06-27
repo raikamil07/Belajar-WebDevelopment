@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px auto 100px;;
+            grid-template-rows: 50px auto 100px;
+            grid-template-areas: 
+                "header header header"
+                ". content ."
+                "footer footer footer";
+        }
+        .header {
+            background-color: aqua;
+            grid-area: header;
+        }
+        .footer {
+            background-color: aqua;
+            grid-area: footer;
+        }
+        .content {
+            background-color: lightblue;
+            grid-area: content;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Selamat Datang Raihan</h1>
+        </div>
+        <div class="content">
+            <h1>Raihan Kamil</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum ex quod architecto sed repellendus harum nemo provident obcaecati ad? Ad velit non autem quo natus eos quae dolorem hic veniam.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic qui, voluptas esse voluptates eaque sed enim in, vel quod beatae quae est ullam fugiat amet sapiente excepturi aliquam temporibus repellendus.</p>
+        </div>
+        <div class="footer">
+            Developed by Raihan Kamil
+        </div>
+    </div>
+</body>
+</html>
