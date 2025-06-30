@@ -8,11 +8,10 @@
 }
 
 * {
-    font-family:"Inter", sans-serif;
+    font-family: "Inter", sans-serif;
     font-size: 16px;
     box-sizing: border-box;
 }
-
 
 body {
     background-color: var(--first-background);
@@ -21,24 +20,29 @@ body {
     display: grid;
     margin: 0;
     padding: 0;
+    min-height: 100vh;
 }
 
-/* about restaurant name */
+/* Restaurant name section */
 .namaResto {
     display: flex;
     background-color: var(--second-background);
     justify-content: center;
     align-items: center;
+    padding: 20px;
 }
 
 .namaResto h1 {
-    font-size: 70px;
+    font-size: clamp(40px, 8vw, 70px);
+    margin: 0;
+    text-align: center;
 }
 
-/* about menu and category thng */
+/* Menu and category section */
 .menu h2 {
-    font-size: 30px;
-    padding-left: 120px ;
+    font-size: clamp(24px, 4vw, 30px);
+    padding-left: clamp(20px, 8vw, 120px);
+    margin: 20px 0;
 }
 
 .category ul {
@@ -46,13 +50,15 @@ body {
     flex-wrap: wrap;
     row-gap: 10px; 
     column-gap: 30px;
-    padding-left: 130px;
+    padding-left: clamp(30px, 8vw, 130px);
+    padding-right: 20px;
     list-style: none;
+    margin: 0 0 30px 0;
 }
 
 .category ul li a {
     display: inline-flex;
-    font-size: 25px;
+    font-size: clamp(18px, 3vw, 25px);
     text-decoration: none;
     color: var(--second-background);
     background-color: var(--primary-blue);
@@ -61,24 +67,34 @@ body {
     border-radius: 100px;
     justify-content: center;
     align-items: center;
+    padding: 10px 20px;
+    transition: all 0.3s ease;
 }
 
+.category ul li a:hover {
+    background-color: #5486a5;
+    color: black;
+    transform: translateY(-2px);
+}
 
-/* about food card */
+/* Food card container */
 .food {
     display: flex; 
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 10px 30px;
+    gap: 20px;
     justify-content: center;
-    align-items: center;
-    padding: 10px;
+    align-items: stretch;
+    padding: 20px;
+    margin-bottom: 60px;
 }
 
-.foodList{
+/* Food card layout */
+.foodList {
     position: relative;
-    width: 500px; /* base width */
-    height: 500px;
+    width: 100%;
+    max-width: 500px;
+    min-height: 400px;
     border: 3px solid black;
     border-radius: 5%;
     padding: 20px;
@@ -88,150 +104,232 @@ body {
         "harga harga image"
         "text text text"
         "order order .";
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 2fr 1fr 2fr;
+    grid-template-rows: auto auto 1fr auto;
     gap: 10px;
     background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.foodList:hover {
+    transform: translateY(-5px);
 }
 
 .foodList img {
     grid-area: image;
     border-radius: 10%;
-    width:200px;
+    width: 100%;
+    max-width: 180px;
     height: auto;
-    margin-top: 50px;
+    object-fit: cover;
+    justify-self: center;
+    align-self: start;
+    margin-top: 10px;
 }
 
-.foodList h3{
-    font-size: 40px;
+.foodList h3 {
+    font-size: clamp(28px, 5vw, 40px);
     grid-area: name;
+    margin: 0;
+    line-height: 1.2;
 }
-.foodList h4{
-    font-size: 30px;
+
+.foodList h4 {
+    font-size: clamp(22px, 4vw, 30px);
     grid-area: harga;
+    margin: 0;
+    color: var(--primary-blue);
+    font-weight: 600;
 }
 
 .foodList p {
     grid-area: text;
+    margin: 10px 0;
+    line-height: 1.4;
+    font-size: clamp(14px, 2vw, 16px);
 }
 
 .foodList .order {
-    font-size: 20px;
+    font-size: clamp(16px, 2.5vw, 20px);
     background-color: var(--primary-orange);
     border-radius: 30px;
     grid-area: order;
-    font-weight: 1000;
-    width: 200px;
+    font-weight: 700;
+    max-width: 200px;
     height: 40px;
     justify-self: start;
     align-self: end;
-    margin-top: auto;
     border: none;
     cursor: pointer;
+    transition: all 0.3s ease;
+    padding: 0 20px;
 }
 
-/* about footer */
-footer {
-    display: flex;
-    flex-grow: 1;
-    background-color: black;
-    width: 100%;
-    position: end;
-    bottom: 0;
-    left:0;
-    width:100%;
-    height: 50px;
-    justify-content: center;
-}
-
-footer p, time {
-    Color: white;
-    font-size: 15px;
-}
-
-/* about hover */
- .foodList .order:hover {
+.foodList .order:hover {
     background-color: #e96d38;
     color: white;
- }
-.category ul li a:hover {
-    background-color: #5486a5;
-    color: black;
-} 
+    transform: scale(1.05);
+}
 
-/* about make it responsive */
-@media screen and (max-width: 390px) {
+/* Footer */
+footer {
+    background-color: black;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+}
+
+footer p, footer time {
+    color: white;
+    font-size: 15px;
+    margin: 0;
+}
+
+/* Responsive Design */
+
+/* Mobile phones (up to 480px) */
+@media screen and (max-width: 480px) {
+    .namaResto {
+        padding: 15px;
+    }
+    
     .menu h2 {
-        padding-left: 20px ;
+        padding-left: 20px;
     }
+    
     .category ul {
-        padding-left: 30px;
-
+        padding-left: 20px;
+        gap: 8px;
     }
-
+    
+    .category ul li a {
+        min-width: 120px;
+        min-height: 45px;
+        font-size: 18px;
+    }
+    
+    .food {
+        padding: 15px;
+        gap: 15px;
+    }
+    
     .foodList {
-        width: 350px;
-        height: 600px;
+        max-width: 100%;
+        min-height: 450px;
         grid-template-areas: 
-        "name image"
-        "harga image"
-        "text text"
-        "order order";
+            "name name"
+            "harga image"
+            "text text"
+            "order order";
+        grid-template-columns: 2fr 1fr;
+        padding: 15px;
     }
+    
     .foodList img {
-        margin-top: 100px;
-        width: 150px;
-        z-index: 1;
+        max-width: 120px;
+        margin-top: 0;
+        align-self: center;
+    }
+    
+    .foodList h3 {
+        font-size: 28px;
+    }
+    
+    .foodList h4 {
+        font-size: 22px;
+    }
+    
+    .foodList .order {
+        max-width: 180px;
+        font-size: 16px;
     }
 }
 
-@media screen and (min-width: 1180px) {
-        .menu h2 {
-        padding-left: 150px ;
+/* Tablets (481px to 768px) */
+@media screen and (min-width: 481px) and (max-width: 768px) {
+    .food {
+        gap: 20px;
     }
-    .category ul {
-        padding-left: 160px;
-
-    }
-
+    
     .foodList {
-        display: grid;
-        width: 350px;
-        height: 600px;
+        max-width: 45%;
+        min-width: 300px;
         grid-template-areas: 
-        "name image"
-        "harga image"
-        "text text"
-        "order order";
+            "name name"
+            "harga image"
+            "text text"
+            "order order";
+        grid-template-columns: 2fr 1fr;
     }
+    
     .foodList img {
-        margin-top: 100px;
-        width: 150px;
-        z-index: 1;
+        max-width: 140px;
+        align-self: center;
     }
 }
 
-@media screen and (min-width: 1728px) {
-        .menu h2 {
-        padding-left: 120px ;
+/* Small laptops (769px to 1024px) */
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+    .foodList {
+        max-width: 45%;
+        min-width: 350px;
     }
+    
+    .foodList img {
+        max-width: 160px;
+    }
+}
+
+/* Large screens (1025px to 1440px) */
+@media screen and (min-width: 1025px) and (max-width: 1440px) {
+    .menu h2 {
+        padding-left: 100px;
+    }
+    
     .category ul {
+        padding-left: 110px;
+    }
+    
+    .foodList {
+        max-width: 450px;
+    }
+    
+    .foodList img {
+        max-width: 170px;
+    }
+}
+
+/* Extra large screens (1441px and up) */
+@media screen and (min-width: 1441px) {
+    .menu h2 {
         padding-left: 120px;
-
     }
-
+    
+    .category ul {
+        padding-left: 130px;
+    }
+    
+    .food {
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+    
     .foodList {
-        display: grid;
-        width: 350px;
-        height: 600px;
-        grid-template-areas: 
-        "name image"
-        "harga image"
-        "text text"
-        "order order";
+        max-width: 400px;
     }
+    
     .foodList img {
-        margin-top: 100px;
-        max-width: auto;
-        z-index: 1;
+        max-width: 180px;
+    }
+}
+
+/* Ultra-wide screens (1920px and up) */
+@media screen and (min-width: 1920px) {
+    .food {
+        max-width: 1600px;
     }
 }
