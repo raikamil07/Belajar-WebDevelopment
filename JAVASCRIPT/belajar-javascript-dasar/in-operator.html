@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        const person = {
+            firstname : "raihan",
+            lastname : undefined
+        }
+
+        const result = "firstname" in person;
+        document.writeln(result)
+
+        const result2 = "lastname" in person;
+        document.writeln(result2)   
+        
+        const name = [null, "raihan", null]
+        const nameresult = 0 in name
+        document.writeln(nameresult)
+
+    </script>
+</body>
+</html>
